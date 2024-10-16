@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSİTE</title>
+    <link rel="stylesheet" href="/styles.css">
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="NEW1.png" alt="Logo"> 
+            </div>
+            <ul>
+                <li><a href="#" class="active" onclick="showSection('home')">Ana Sayfa</a></li>
+                <li><a href="#" onclick="showSection('contact')">İletişim</a></li>
+                <li><a href="#" onclick="showSection('projects')">Projeler</a></li>
+                <li><a href="#" onclick="showSection('survey')">Memnuniyet Anketi</a></li>
+            </ul>
+        </div>
+
+        <div id="welcome-message">
+            HOŞ GELDİNİZ
+        </div>
+        <div id="home">
+            <div class="info_button">
+                <button onclick="showinfo()">BİLGİLENDİRME</button>
+            </div>
+        </div>
+        <div id="contact">
+            <h2>İletişim Bilgileri</h2>
+            <p>Ad: Meltem</p>
+            <p>Soyad: ERDOĞAN</p>
+            <p>E-posta: erdoganmeltem244@gmail.com</p>
+            <p>Üniversite: DÜZCE ÜNİVERSİTESİ</p>
+        </div>
+
+        <div id="projects">
+            <h2>Projeler</h2>
+            <div class="project-type">
+                <button onclick="showPythonProjects()">Python Projeleri</button>
+                <button onclick="showCppProjects()">C++ Projeleri</button>
+            </div>
+            <div id="python-projects" style="display: none;">
+                <h3>Python Projeleri</h3>
+                <p>1. Python Projesi 1: Basit Hesap Makinesi <button onclick="toggleProjectDetails('python-project1-details')">Detaylar</button></p>
+                <div id="python-project1-details" class="project-details">
+                    <p>Açıklama: Bu proje, temel matematik işlemlerini gerçekleştiren bir hesap makinesidir.</p>
+                </div>
+                <p>2. Python Projesi 2: Sudoku Oyunu <button onclick="toggleProjectDetails('python-project2-details')">Detaylar</button></p>
+                <div id="python-project2-details" class="project-details">
+                    <p>Açıklama: Sudoku bulmacalarını çözmek için bir oyun uygulamasıdır.</p>
+                </div>
+            </div>
+            <div id="cpp-projects" style="display: none;">
+                <h3>C++ Projeleri</h3>
+                <p>1. C++ Projesi 1: 1. Proje <button onclick="toggleProjectDetails('cpp-project1-details')">Detaylar</button></p>
+                <div id="cpp-project1-details" class="project-details">
+                    <p>Açıklama: Bu proje, C++ ile yapılan ilk projedir.</p>
+                </div>
+                <p>2. C++ Projesi 2: 2. Proje <button onclick="toggleProjectDetails('cpp-project2-details')">Detaylar</button></p>
+                <div id="cpp-project2-details" class="project-details">
+                    <p>Açıklama: C++ kullanarak geliştirilmiş ikinci projedir.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="survey">
+            <h2>Memnuniyet Anketi</h2>
+            <form>
+                <label for="satisfaction">Memnuniyet Seviyesi:</label><br>
+                <select id="satisfaction" name="satisfaction">
+                    <option value="1">1 - Çok İyi</option>                     
+                    <option value="2">2 - İyi</option>                     
+                    <option value="3">3 - Orta</option>                     
+                    <option value="4">4 - Kötü</option>                     
+                    <option value="5">5 - Berbat</option>
+                </select><br><br>
+                <label for="feedback">Geri Bildirim:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Yorumlarınızı buraya yazın..."></textarea><br><br>
+                <input type="submit" value="Gönder">
+            </form>
+        </div>
+
+        <div id="ad-popup" class="ad-popup">
+            <div class="ad-content">
+                <span class="close-btn" onclick="closeAd()">&times;</span>
+                <a href="https://www.w3schools.com/" target="_blank">
+                    <img src="https://www.w3schools.com/images/w3schools_logo_436_2.png" alt="Reklam" style="max-width: 100%; height: auto;">
+                </a>
+                <p>Sen de W3schools'la öğrenmenin keyfini çıkar</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
